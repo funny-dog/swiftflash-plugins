@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-23T06:49:27Z",
+  "updatedAt": "2026-11-23T06:55:52Z",
   "plugins": [
     {
       "id": "com.swiftflash.lang.zh-cn",
@@ -15,7 +15,7 @@
       "minAppVersion": "1.0",
       "archiveURL": "releases/com.swiftflash.lang.zh-cn-1.0.0.zip",
       "manifestURL": "plugins/com.swiftflash.lang.zh-cn/manifest.json",
-      "sha256": "8907a5767dd39633457da359d79d5d6ea4482ce9888d0b40ba5f879954d56ff2"
+      "sha256": "35ac0ab43fd88a4191b6cf74bb8b315055795b9d5d04d6f8e3308a55dd7740d8"
     }
   ]
 }

@@ -40,6 +40,8 @@
   "menu.view.zoomOut": "缩小字体",
   "menu.view.resetZoom": "重置字体大小",
   "menu.view.toggleSidebar": "切换侧边栏",
+  "menu.view.toggleGitPanel": "切换 Git 面板",
+  "menu.view.viewGitDiff": "查看 Git 差异",
   "menu.view.toggleTerminal": "切换集成终端",
 
   "theme.subtitle.zedOneDark": "经典暗色",
