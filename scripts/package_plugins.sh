@@ -28,11 +28,9 @@ for name in sorted(os.listdir(plugins_dir)):
 
     plugin_id = manifest["id"]
     version = manifest["version"]
-    zip_name = f"{plugin_id}-{version}.zip"
-    zip_rel = f"releases/{zip_name}"
-    zip_abs = os.path.join(releases_dir, zip_name)
 
-    with zipfile.ZipFile(zip_abs, "w", compression=zipfile.ZIP_DEFLATED) as zf:
+    tmp_zip = os.path.join(releases_dir, f".tmp-{plugin_id}-{version}.zip")
+    with zipfile.ZipFile(tmp_zip, "w", compression=zipfile.ZIP_DEFLATED) as zf:
         for dirpath, _, filenames in os.walk(plugin_path):
             for fname in sorted(filenames):
                 if fname == ".DS_Store":
@@ -41,7 +39,11 @@ for name in sorted(os.listdir(plugins_dir)):
                 rel_in_plugin = os.path.relpath(abs_file, plugin_path)
                 zf.write(abs_file, arcname=rel_in_plugin)
 
-    sha256 = hashlib.sha256(open(zip_abs, "rb").read()).hexdigest()
+    sha256 = hashlib.sha256(open(tmp_zip, "rb").read()).hexdigest()
+    zip_name = f"{plugin_id}-{version}-{sha256[:8]}.zip"
+    zip_rel = f"releases/{zip_name}"
+    zip_abs = os.path.join(releases_dir, zip_name)
+    os.replace(tmp_zip, zip_abs)
     loc = manifest.get("contributes", {}).get("localization", {})
 
     entries.append({
