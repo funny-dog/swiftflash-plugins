@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-23T06:49:27Z",
+  "plugins": [
+    {
+      "id": "com.swiftflash.lang.zh-cn",
+      "name": "简体中文语言包",
+      "englishName": "Simplified Chinese Language Pack",
+      "description": "将 SwiftFlash 菜单、侧边栏、Git 面板、设置、状态栏与提示信息切换为简体中文界面。",
+      "version": "1.0.0",
+      "author": "SwiftFlash",
+      "type": "language",
+      "languageCode": "zh-CN",
+      "nativeName": "简体中文",
+      "minAppVersion": "1.0",
+      "archiveURL": "releases/com.swiftflash.lang.zh-cn-1.0.0.zip",
+      "manifestURL": "plugins/com.swiftflash.lang.zh-cn/manifest.json",
+      "sha256": "8907a5767dd39633457da359d79d5d6ea4482ce9888d0b40ba5f879954d56ff2"
+    }
+  ]
+}
